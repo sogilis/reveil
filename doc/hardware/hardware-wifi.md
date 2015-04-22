@@ -1,11 +1,6 @@
 # TP-Link TL-WN725N Wifi dongle configuration
 
-### Raspberry Pi firmware update
-
-```
-sudo rpi-update
-sudo reboot
-```
+**prerequisite : The Wifi dongle shall not be plugged.**
 
 ### Retrieve Linux kernel version
 
