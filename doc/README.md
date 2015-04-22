@@ -1,4 +1,4 @@
 # Documentation
 
-* [Procédure relatives au matériel](hardware/README.md)
+* [Procédures relatives au matériel](hardware/README.md)
 
