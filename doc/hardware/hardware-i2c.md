@@ -2,22 +2,24 @@
 
 ### Downloading packages
 
-```
-sudo apt-get install python-smbus
-sudo apt-get install i2c-tools
-```
+	sudo apt-get install python-smbus -y
+
 
 ### Configuring I2C
-open raspi-config
 
-```
-sudo raspi-config
-```
-in graphic window, go to advanced tools, then enable automatic loading for I2C kernel module
+Open raspi-config with the command **`sudo raspi-config`**.
+
+in graphic window, go to **`Advanced Options`**, then enable automatic loading for I2C kernel module : **A7 I2C**, click OK or Yes for all, and then finish.
+
 
 ### Adding modules to /etc/modules
 
-```
-echo "i2c-bcm2708" >> /etc/modules
-echo "i2c-dev" >> /etc/modules
-```
+In the file /etc/modules, add the two following lines in sudo mode:
+
+		i2c-bcm2708
+		i2c-dev
+
+Then reboot the raspberry.
+
+You can now check the i2c enabling with the command `sudo i2cdetect -y 1` (in some cases `sudo i2cdetect -y 0`).
+

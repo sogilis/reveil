@@ -4,7 +4,7 @@ Ce document décris la liste des devices à installer dans les différentes conf
 
 La version actuelle a été validée sur la version du noyau Linux 3.18.11+ sur les Raspberry Pi B et Raspberry Pi B+.
 
-Avant toute chose il est important de mettre à jour le raspberry avec la commande **`sudo  rpi-update`**
+Avant toute chose il est important de mettre à jour le raspberry avec la commande **`sudo  rpi-update`** et redémarrer **`sudo reboot`**
 
 Les étapes suivantes peuvent être déroulées dans n'importe quel ordre.
 
@@ -25,3 +25,5 @@ La procédure de configuration est donnée dans le document : [TP-Link TL-WN725N
 
 * **`sudo raspi-config`** : Configuration du Raspberry.
 * **`sudo dpkg-reconfigure tzdata`** : Reconfiguration de la time zone.
+* **`dmesg`** : Affiche le journal de boot.
+* **`sudo reboot`** : Redémarre le raspberry.
