@@ -1,5 +1,5 @@
 from assistant import Assistant
-from events import agenda
+from events import Agenda, Event
 from googlecalendar import authenticate
 from datetime import datetime
 
@@ -18,7 +18,7 @@ class GoogleAssistant(Assistant):
 
         if not events:
             print 'No upcoming events found.'
-        for event in events:
-            start = event['start'].get('dateTime', event['start'].get('date'))
-            print start, event['summary']
-            agenda.content.put((0, event))
+        for gevent in events:
+            start = gevent['start'].get('dateTime', gevent['start'].get('date'))
+            event = Event(start, gevent['summary'])
+            agenda.content.put(event)
