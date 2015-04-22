@@ -10,5 +10,6 @@ virtualenv env
 source env/bin/activate
 pip install --upgrade google-api-python-client
 pip install --upgrade schedule
+pip install --upgrade dateutils
 sudo apt-get install python-gst-1.0
 ```
