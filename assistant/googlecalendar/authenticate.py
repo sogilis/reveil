@@ -15,7 +15,7 @@ except ImportError:
 
 SCOPES = 'https://www.googleapis.com/auth/calendar.readonly'
 CLIENT_SECRET_FILE = 'client_secret.json'
-APPLICATION_NAME = 'Calendar API Quickstart'
+APPLICATION_NAME = 'Calendar API alarm'
 
 def get_service():
 	"""
@@ -28,7 +28,7 @@ def get_service():
 	credential_dir = os.path.join(os.getcwd(), '.credentials')
 	if not os.path.exists(credential_dir):
 		os.makedirs(credential_dir)
-	credential_path = os.path.join(credential_dir, 'calendar-api-quickstart.json')
+	credential_path = os.path.join(credential_dir, 'calendar-api-alarm.json')
 
 	store = oauth2client.file.Storage(credential_path)
 	credentials = store.get()
